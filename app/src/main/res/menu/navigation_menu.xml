@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/c_india"
+        android:title="@string/india" />
+    <item
+        android:id="@+id/c_london"
+        android:title="@string/London" />
+    <item
+        android:id="@+id/c_snfrnc"
+        android:title="@string/san_francisco" />
+    <item
+        android:id="@+id/c_dubai"
+        android:title="@string/dubai" />
+    <item
+        android:id="@+id/c_moscow"
+        android:title="@string/moscow" />
+    <item
+        android:id="@+id/c_montreal"
+        android:title="@string/montreal" />
+
+</menu>
