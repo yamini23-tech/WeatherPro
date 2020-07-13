@@ -8,7 +8,7 @@
 
     <string name="humidity">Humidity: %1$s</string>
     <string name="predictability">Predictability: %1$s</string>
-    <string name="india">India</string>
+    <string name="india">Indianapolis</string>
     <string name="London">London</string>
     <string name="san_francisco">San Francisco</string>
     <string name="dubai">Dubai</string>

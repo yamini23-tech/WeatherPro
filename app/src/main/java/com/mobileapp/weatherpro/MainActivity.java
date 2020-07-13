@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements WeatherTask.Weath
         mActionBarDrawerToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        mActivityMainBinding.nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+       mActivityMainBinding.nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements WeatherTask.Weath
                         return true;
                 }
                 requestCountry(mCountry);
-                mActivityMainBinding.drawerLayout.closeDrawers();
+              mActivityMainBinding.drawerLayout.closeDrawers();
                 return true;
 
             }
