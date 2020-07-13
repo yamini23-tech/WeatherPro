@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">WeatherPro</string>
+    <string name="Open">open</string>
+    <string name="Close">close</string>
+    <string name="min_temp">Min. Temp</string>
+    <string name="max_temp">Max. Temp</string>
+    <string name="actual_temp">Actual Temp</string>
+
+    <string name="humidity">Humidity: %1$s</string>
+    <string name="predictability">Predictability: %1$s</string>
+    <string name="india">India</string>
+    <string name="London">London</string>
+    <string name="san_francisco">San Francisco</string>
+    <string name="dubai">Dubai</string>
+    <string name="moscow">Moscow</string>
+    <string name="montreal">Montreal</string>
+    <string name="test">%1$s\n%2$s</string>
 </resources>
