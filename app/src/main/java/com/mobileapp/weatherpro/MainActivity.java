@@ -1,11 +1,14 @@
 package com.mobileapp.weatherpro;
 
-import android.os.Bundle;
-import android.view.MenuItem;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
 import com.mobileapp.weatherpro.databinding.ActivityMainBinding;
@@ -35,8 +38,9 @@ public class MainActivity extends AppCompatActivity implements WeatherTask.Weath
         mActivityMainBinding.drawerLayout.addDrawerListener(mActionBarDrawerToggle);
         mActionBarDrawerToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(ContextCompat.getDrawable(this,R.drawable.round_drawable));
 
-       mActivityMainBinding.nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+        mActivityMainBinding.nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
@@ -63,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements WeatherTask.Weath
                         return true;
                 }
                 requestCountry(mCountry);
-              mActivityMainBinding.drawerLayout.closeDrawers();
+                mActivityMainBinding.drawerLayout.closeDrawers();
                 return true;
 
             }
@@ -73,7 +77,6 @@ public class MainActivity extends AppCompatActivity implements WeatherTask.Weath
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         if (mActionBarDrawerToggle.onOptionsItemSelected(item))
             return true;
         return super.onOptionsItemSelected(item);
@@ -121,7 +124,7 @@ public class MainActivity extends AppCompatActivity implements WeatherTask.Weath
         return list;
     }
 
-    private void refreshUI(List<WeatherInfo> list) {
+    private void refreshUI(final List<WeatherInfo> list) {
         mActivityMainBinding.content.cityName.setText(list.get(0).getCityName());
         mActivityMainBinding.content.valMinTemp.setText(String.format("%.2f", Float.valueOf(list.get(0).getMinTemp())));
         mActivityMainBinding.content.valMaxTemp.setText(String.format("%.2f", Float.valueOf(list.get(0).getMaxTemp())));
@@ -139,6 +142,86 @@ public class MainActivity extends AppCompatActivity implements WeatherTask.Weath
         mActivityMainBinding.content.tvDesc3.setText(String.format(getString(R.string.test), list.get(3).getWeatherStateName(), getDayString(list.get(3).getDate())));
         mActivityMainBinding.content.tvDesc4.setText(String.format(getString(R.string.test), list.get(4).getWeatherStateName(), getDayString(list.get(4).getDate())));
         mActivityMainBinding.content.tvDesc5.setText(String.format(getString(R.string.test), list.get(5).getWeatherStateName(), getDayString(list.get(5).getDate())));
+
+
+
+        //set listener
+
+
+        mActivityMainBinding.content.tvDesc1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(getDayString(list.get(1).getDate()).equals("Wed")) {
+
+                    passAnIntent(1,list);
+
+                }
+            }
+        });
+
+        mActivityMainBinding.content.tvDesc2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(getDayString(list.get(2).getDate()).equals("Thu")) {
+
+                    passAnIntent(2,list);
+
+                }
+            }
+        });
+
+        mActivityMainBinding.content.tvDesc3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(getDayString(list.get(3).getDate()).equals("Fri")) {
+
+                    passAnIntent(3,list);
+
+                }
+            }
+        });
+
+        mActivityMainBinding.content.tvDesc4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(getDayString(list.get(4).getDate()).equals("Sat")) {
+
+                    passAnIntent(4,list);
+
+                }
+            }
+        });
+
+        mActivityMainBinding.content.tvDesc5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(getDayString(list.get(5).getDate()).equals("Sun")) {
+
+                    passAnIntent(5,list);
+
+                }            }
+        });
+
+
+
+
+    }
+
+    private void passAnIntent(int i, List<WeatherInfo> list) {
+
+        String minTemp = String.format("%.2f", Float.valueOf(list.get(i).getMinTemp()));
+        String maxTemp = String.format("%.2f", Float.valueOf(list.get(i).getMaxTemp()));
+        String actTemp = String.format("%.2f", Float.valueOf(list.get(i).getActTemp()));
+        String cityName = list.get(i).getCityName();
+        Intent intent = new Intent(MainActivity.this,SubActivity.class);
+        intent = new Intent(MainActivity.this, SubActivity.class);
+        intent.putExtra("minTemp", minTemp);
+        intent.putExtra("maxTemp", maxTemp);
+        intent.putExtra("actTemp", actTemp);
+        intent.putExtra("cityName", cityName);
+        startActivity(intent);
+
     }
 
     @Override

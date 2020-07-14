@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,8 +11,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/montreal"
+        android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
+        style="@style/textStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,6 +35,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="@string/min_temp"
+        android:textColor="#000000"
+        style="@style/textStyle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_icon1" />
 
@@ -40,6 +45,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0.0"
+        android:textColor="#000000"
+        style="@style/textStyle"
         app:layout_constraintEnd_toEndOf="@id/min_temp"
         app:layout_constraintStart_toStartOf="@id/min_temp"
         app:layout_constraintTop_toBottomOf="@id/min_temp" />
@@ -50,6 +57,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="@string/actual_temp"
+        android:textColor="#000000"
+        style="@style/textStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_icon1" />
@@ -59,6 +68,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0.0"
+        android:textColor="#000000"
+        style="@style/textStyle"
         app:layout_constraintEnd_toEndOf="@id/act_temp"
         app:layout_constraintStart_toStartOf="@id/act_temp"
         app:layout_constraintTop_toBottomOf="@id/act_temp" />
@@ -69,6 +80,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="@string/max_temp"
+        android:textColor="#000000"
+        style="@style/textStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_icon1" />
 
@@ -77,6 +90,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0.0"
+        android:textColor="#000000"
+        style="@style/textStyle"
         app:layout_constraintEnd_toEndOf="@id/max_temp"
         app:layout_constraintStart_toStartOf="@id/max_temp"
         app:layout_constraintTop_toBottomOf="@id/max_temp" />
@@ -87,6 +102,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="Humidity: 0%"
+        android:textColor="#000000"
+        style="@style/textStyle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/val_min_temp" />
 
@@ -96,6 +113,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Predictability: 0%"
+        android:textColor="#000000"
+        style="@style/textStyle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/humidity" />
 
@@ -116,6 +135,8 @@
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:gravity="center"
+        android:textColor="#000000"
+        style="@style/textStyle"
         app:layout_constraintEnd_toEndOf="@id/iv_icon2"
         app:layout_constraintStart_toStartOf="@+id/iv_icon2"
         app:layout_constraintTop_toBottomOf="@id/iv_icon2" />
@@ -137,6 +158,8 @@
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:gravity="center"
+        android:textColor="#000000"
+        style="@style/textStyle"
         app:layout_constraintEnd_toEndOf="@id/iv_icon3"
         app:layout_constraintStart_toStartOf="@+id/iv_icon3"
         app:layout_constraintTop_toBottomOf="@id/iv_icon3" />
@@ -157,6 +180,8 @@
         android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textColor="#000000"
+        style="@style/textStyle"
         app:layout_constraintEnd_toEndOf="@id/iv_icon4"
         app:layout_constraintStart_toStartOf="@+id/iv_icon4"
         app:layout_constraintTop_toBottomOf="@id/iv_icon4" />
@@ -177,6 +202,8 @@
         android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textColor="#000000"
+        style="@style/textStyle"
         app:layout_constraintEnd_toEndOf="@id/iv_icon5"
         app:layout_constraintStart_toStartOf="@+id/iv_icon5"
         app:layout_constraintTop_toBottomOf="@id/iv_icon5" />
@@ -196,7 +223,9 @@
         android:id="@+id/tv_desc5"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
+        style="@style/textStyle"
         android:gravity="center"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="@id/iv_icon6"
         app:layout_constraintStart_toStartOf="@+id/iv_icon6"
         app:layout_constraintTop_toBottomOf="@id/iv_icon6" />
