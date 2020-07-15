@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity implements WeatherTask.Weath
             @Override
             public void onClick(View view) {
 
-                if(getDayString(list.get(1).getDate()).equals("Wed")) {
+                if(getDayString(list.get(1).getDate()).equals("Thu")) {
 
                     passAnIntent(1,list);
 
@@ -163,7 +163,7 @@ public class MainActivity extends AppCompatActivity implements WeatherTask.Weath
         mActivityMainBinding.content.tvDesc2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(getDayString(list.get(2).getDate()).equals("Thu")) {
+                if(getDayString(list.get(2).getDate()).equals("Fri")) {
 
                     passAnIntent(2,list);
 
@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity implements WeatherTask.Weath
         mActivityMainBinding.content.tvDesc3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(getDayString(list.get(3).getDate()).equals("Fri")) {
+                if(getDayString(list.get(3).getDate()).equals("Sat")) {
 
                     passAnIntent(3,list);
 
@@ -185,7 +185,7 @@ public class MainActivity extends AppCompatActivity implements WeatherTask.Weath
         mActivityMainBinding.content.tvDesc4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(getDayString(list.get(4).getDate()).equals("Sat")) {
+                if(getDayString(list.get(4).getDate()).equals("Sun")) {
 
                     passAnIntent(4,list);
 
@@ -196,7 +196,7 @@ public class MainActivity extends AppCompatActivity implements WeatherTask.Weath
         mActivityMainBinding.content.tvDesc5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(getDayString(list.get(5).getDate()).equals("Sun")) {
+                if(getDayString(list.get(5).getDate()).equals("Mon")) {
 
                     passAnIntent(5,list);
 
